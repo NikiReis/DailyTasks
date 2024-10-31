@@ -10,7 +10,7 @@ import {
   Alert,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { MaterialIcons } from "@expo/vector-icons"; // Biblioteca de ícones
+import { MaterialIcons } from "@expo/vector-icons"; 
 
 export default function App() {
   const [task, setTask] = useState("");
@@ -50,7 +50,6 @@ export default function App() {
   };
 
   const removeTask = (id) => {
-    // Função para remover a tarefa
     Alert.alert(
       "Remover Tarefa",
       "Tem certeza que deseja remover esta tarefa?",
@@ -97,7 +96,7 @@ export default function App() {
           <View style={styles.taskContainer}>
             <Text style={styles.taskText}>{item.text}</Text>
             <TouchableOpacity
-              onPress={() => removeTask(item.id)} // Chama a função de remover tarefa ao clicar no ícone de lixeira
+              onPress={() => removeTask(item.id)} 
               style={styles.deleteIcon}
             >
               <MaterialIcons name="delete" size={24} color="black" />
